@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/lcds-598005ee-ae29-4962-8629-b67fa928d13c/styles.css">
+<script src="_ds/lcds-598005ee-ae29-4962-8629-b67fa928d13c/_ds_bundle.js"></script>
+<style>a{color:var(--color-accent);text-decoration:none}a:hover{color:var(--color-accent-300)}body{margin:0;background:#001823}::-webkit-scrollbar{height:8px;width:8px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:4px}</style>
+</helmet>
+<div style="background:var(--color-bg);min-height:100vh;font-family:var(--font-body);color:var(--color-text)">
+
+<!-- ══ ONBOARDING ══ -->
+<sc-if value="{{ isOnboarding }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Onboarding" style="position:relative;min-height:100vh;display:flex;align-items:stretch">
+  <div style="position:absolute;inset:0">
+    <img src="assets/hero-1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5">
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,24,35,.95) 0%,rgba(0,24,35,.55) 55%,rgba(0,24,35,.85) 100%)"></div>
+  </div>
+  <div style="position:relative;z-index:2;width:520px;max-width:92vw;margin:auto 0 auto 8vw;display:flex;flex-direction:column;gap:28px;padding:64px 0">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--color-accent);color:var(--color-neutral-900);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:18px">S</div>
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:20px;letter-spacing:.08em;color:var(--color-accent)">LES CHEMINS DE SOIE</div>
+    </div>
+    <div>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:52px;line-height:1.08;color:#fff;margin:0 0 16px">Avancez vers la meilleure version de vous-même</h1>
+      <p style="font-size:18px;line-height:1.55;color:var(--color-text-muted);margin:0">Une école en ligne de développement personnel. Des parcours en vidéo, guidés pas à pas, pour cultiver sérénité, confiance et clarté — à votre rythme, sur tous vos écrans.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label style="font-size:13px;color:var(--color-text-faint);letter-spacing:.06em">ADRESSE E-MAIL</label>
+        <input type="email" placeholder="vous@exemple.fr" style="height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#fff;padding:0 22px;font-family:var(--font-body);font-size:16px;outline:none" style-focus="border-color:var(--color-accent)">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label style="font-size:13px;color:var(--color-text-faint);letter-spacing:.06em">MOT DE PASSE</label>
+        <input type="password" placeholder="••••••••" style="height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#fff;padding:0 22px;font-family:var(--font-body);font-size:16px;outline:none" style-focus="border-color:var(--color-accent)">
+      </div>
+      <button onClick="{{ goAccueil }}" style="height:56px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-family:var(--font-body);font-weight:500;font-size:17px;cursor:pointer;margin-top:6px" style-hover="background:var(--color-accent-600)">Créer mon compte gratuit</button>
+      <button onClick="{{ goAccueil }}" style="height:56px;border-radius:999px;border:none;background:rgba(255,255,255,.1);color:var(--color-accent);font-family:var(--font-body);font-weight:500;font-size:16px;cursor:pointer" style-hover="background:rgba(255,255,255,.16)">J'ai déjà un compte — me connecter</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--color-text-faint)">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent-2-300)" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+      Le niveau gratuit inclut 3 cours d'introduction complets.
+    </div>
+  </div>
+  <div style="position:absolute;right:8vw;bottom:48px;z-index:2;display:flex;align-items:center;gap:14px;background:rgba(0,0,0,.35);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:16px 20px;max-width:340px">
+    <div style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex:none">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+    </div>
+    <div style="font-size:13px;line-height:1.4;color:var(--color-text-muted)">Installez <strong style="color:#fff">Les Chemins de Soie</strong> sur votre téléphone ou ordinateur — l'école fonctionne comme une application.</div>
+  </div>
+</div>
+</sc-if>
+
+<!-- ══ APP SHELL ══ -->
+<sc-if value="{{ inApp }}" hint-placeholder-val="{{ false }}">
+<div>
+  <!-- sidebar rail -->
+  <div style="position:fixed;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:40">
+    <sc-for list="{{ navItems }}" as="nav" hint-placeholder-count="4">
+      <div onClick="{{ nav.go }}" title="{{ nav.label }}" style="width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(20px);background:{{ nav.bg }};color:{{ nav.color }}" style-hover="background:rgba(255,255,255,.2)">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="{{ nav.icon }}"/></svg>
+      </div>
+    </sc-for>
+  </div>
+  <!-- topbar -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 48px;position:relative;z-index:30">
+    <div onClick="{{ goAccueil }}" style="display:flex;align-items:center;gap:12px;cursor:pointer">
+      <div style="width:36px;height:36px;border-radius:50%;background:var(--color-accent);color:var(--color-neutral-900);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:15px">S</div>
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:18px;letter-spacing:.08em;color:var(--color-accent)">LES CHEMINS DE SOIE</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <sc-if value="{{ isFree }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ goAbonnement }}" style="height:44px;padding:0 22px;border-radius:999px;border:1px solid var(--color-accent);background:transparent;color:var(--color-accent);font-family:var(--font-body);font-weight:500;font-size:15px;cursor:pointer" style-hover="background:rgba(205,172,115,.12)">✦ Passer Premium</button>
+      </sc-if>
+      <sc-if value="{{ isPremium }}" hint-placeholder-val="{{ false }}">
+        <div style="height:44px;padding:0 20px;border-radius:999px;background:var(--color-accent);color:var(--color-neutral-900);font-weight:500;font-size:15px;display:flex;align-items:center">✦ Premium</div>
+      </sc-if>
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;color:var(--color-accent);cursor:pointer" style-hover="background:rgba(255,255,255,.18)">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+      </div>
+      <div onClick="{{ goDashboard }}" style="width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;color:var(--color-accent);cursor:pointer;font-weight:500" style-hover="background:rgba(255,255,255,.18)">M</div>
+    </div>
+  </div>
+
+  <!-- ══ ACCUEIL ══ -->
+  <sc-if value="{{ isAccueil }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Accueil">
+    <div style="position:relative;width:100%;height:560px;margin-top:-84px">
+      <img src="assets/hero-1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,24,35,.25) 0%,var(--color-bg) 96%)"></div>
+      <div style="position:absolute;left:110px;bottom:96px;max-width:580px">
+        <div style="font-size:15px;color:var(--color-accent-2-300);margin-bottom:12px;letter-spacing:.04em">Émotions &amp; Sérénité — Cours phare</div>
+        <h1 style="font-family:var(--font-heading);font-weight:800;font-size:58px;line-height:1.05;color:#fff;margin:0 0 18px">La méditation du cœur</h1>
+        <p style="font-size:18px;line-height:1.5;color:var(--color-text-muted);margin:0 0 28px">Huit leçons guidées pour apaiser le mental, écouter ce qui compte et retrouver un calme durable. Un voyage intérieur, en vidéo.</p>
+        <div style="display:flex;gap:14px">
+          <button onClick="{{ openFeatured }}" style="height:54px;padding:0 28px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-family:var(--font-body);font-weight:500;font-size:16px;cursor:pointer" style-hover="background:var(--color-accent-600)">▶ Commencer</button>
+          <button onClick="{{ goCatalogue }}" style="height:54px;padding:0 28px;border-radius:999px;border:none;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);color:var(--color-accent);font-family:var(--font-body);font-weight:500;font-size:16px;cursor:pointer" style-hover="background:rgba(255,255,255,.18)">Explorer le catalogue</button>
+        </div>
+      </div>
+    </div>
+    <div style="padding:0 110px 96px;display:flex;flex-direction:column;gap:56px">
+      <sc-if value="{{ isFree }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid rgba(205,172,115,.35);background:rgba(205,172,115,.07);border-radius:16px;padding:22px 28px">
+          <div>
+            <div style="font-family:var(--font-heading);font-weight:700;font-size:19px;color:#fff;margin-bottom:4px">Vous découvrez avec le niveau gratuit</div>
+            <div style="font-size:15px;color:var(--color-text-muted)">3 cours d'introduction inclus. Débloquez les 9 parcours complets, quiz et certificats avec Premium.</div>
+          </div>
+          <button onClick="{{ goAbonnement }}" style="height:48px;padding:0 26px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-weight:500;font-size:15px;cursor:pointer;flex:none" style-hover="background:var(--color-accent-600)">Voir les offres</button>
+        </div>
+      </sc-if>
+      <sc-for list="{{ rails }}" as="rail" hint-placeholder-count="2">
+        <div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+            <div style="font-family:var(--font-heading);font-weight:700;font-size:23px;color:#fff">{{ rail.title }}</div>
+            <div onClick="{{ goCatalogue }}" style="font-size:14px;color:var(--color-accent);cursor:pointer">Tout voir</div>
+          </div>
+          <div style="display:flex;gap:20px;overflow-x:auto;padding-bottom:6px">
+            <sc-for list="{{ rail.items }}" as="item" hint-placeholder-count="4">
+              <div onClick="{{ item.open }}" style="position:relative;width:225px;aspect-ratio:341/475;flex:none;border-radius:8px;overflow:hidden;background:var(--color-neutral-800);cursor:pointer" style-hover="outline:2px solid var(--color-accent)">
+                <img src="{{ item.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.92) 100%)"></div>
+                <sc-if value="{{ item.locked }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.45);backdrop-filter:blur(20px);border:1px solid rgba(205,172,115,.5);display:flex;align-items:center;justify-content:center">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--color-accent)" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ item.freeBadge }}" hint-placeholder-val="{{ false }}">
+                  <div style="position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:999px;background:rgba(71,127,153,.85);color:#fff;font-size:11px;font-weight:500;letter-spacing:.06em">GRATUIT</div>
+                </sc-if>
+                <div style="position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2">
+                  <div style="font-size:12px;color:var(--color-text-muted);margin-bottom:4px">{{ item.kicker }}</div>
+                  <div style="font-weight:700;font-size:16px;color:#fff;line-height:1.25">{{ item.title }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══ CATALOGUE ══ -->
+  <sc-if value="{{ isCatalogue }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Catalogue" style="padding:24px 110px 96px">
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;color:#fff;margin:0 0 8px">Catalogue des cours</h1>
+    <p style="font-size:16px;color:var(--color-text-muted);margin:0 0 28px">Douze parcours vidéo pour cheminer, du souffle à la confiance.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+        <div onClick="{{ f.pick }}" style="height:40px;padding:0 20px;border-radius:999px;display:flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:500;background:{{ f.bg }};color:{{ f.color }};border:1px solid {{ f.border }}" style-hover="border-color:var(--color-accent)">
+          <sc-if value="{{ f.dot }}" hint-placeholder-val="{{ false }}"><span style="width:8px;height:8px;border-radius:50%;background:{{ f.dot }}"></span></sc-if>
+          {{ f.label }}
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:24px">
+      <sc-for list="{{ catalogueItems }}" as="item" hint-placeholder-count="8">
+        <div onClick="{{ item.open }}" style="position:relative;aspect-ratio:341/475;border-radius:8px;overflow:hidden;background:var(--color-neutral-800);cursor:pointer" style-hover="outline:2px solid var(--color-accent)">
+          <img src="{{ item.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.92) 100%)"></div>
+          <sc-if value="{{ item.locked }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.45);backdrop-filter:blur(20px);border:1px solid rgba(205,172,115,.5);display:flex;align-items:center;justify-content:center">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--color-accent)" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            </div>
+          </sc-if>
+          <sc-if value="{{ item.freeBadge }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:12px;left:12px;padding:5px 12px;border-radius:999px;background:rgba(71,127,153,.85);color:#fff;font-size:11px;font-weight:500;letter-spacing:.06em">GRATUIT</div>
+          </sc-if>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:16px;z-index:2">
+            <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--color-text-muted);margin-bottom:5px"><span style="width:7px;height:7px;border-radius:50%;background:{{ item.dot }}"></span>{{ item.kicker }}</div>
+            <div style="font-weight:700;font-size:16px;color:#fff;line-height:1.25;margin-bottom:5px">{{ item.title }}</div>
+            <div style="font-size:12px;color:var(--color-text-faint)">{{ item.meta }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══ COURS ══ -->
+  <sc-if value="{{ isCours }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Page cours" style="margin-top:-84px">
+    <div style="position:relative;width:100%;height:480px">
+      <img src="{{ course.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,24,35,.3) 0%,var(--color-bg) 96%)"></div>
+      <div style="position:absolute;left:110px;bottom:56px;max-width:640px">
+        <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--color-accent-2-300);margin-bottom:10px"><span style="width:8px;height:8px;border-radius:50%;background:{{ course.dot }}"></span>{{ course.kicker }}</div>
+        <h1 style="font-family:var(--font-heading);font-weight:800;font-size:48px;line-height:1.06;color:#fff;margin:0 0 14px">{{ course.title }}</h1>
+        <p style="font-size:17px;line-height:1.5;color:var(--color-text-muted);margin:0 0 22px">{{ course.desc }}</p>
+        <div style="display:flex;align-items:center;gap:18px;font-size:14px;color:var(--color-text-faint)">
+          <span>{{ course.meta }}</span><span>·</span><span>{{ course.level }}</span>
+          <sc-if value="{{ course.freeBadge }}" hint-placeholder-val="{{ false }}"><span style="padding:4px 12px;border-radius:999px;background:rgba(71,127,153,.85);color:#fff;font-size:11px;font-weight:500;letter-spacing:.06em">GRATUIT</span></sc-if>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 360px;gap:48px;padding:8px 110px 96px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+          <div style="font-family:var(--font-heading);font-weight:700;font-size:22px;color:#fff">Leçons</div>
+          <div style="font-size:14px;color:var(--color-text-faint)">{{ course.progressLabel }}</div>
+        </div>
+        <div style="height:6px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden;margin-bottom:10px"><div style="height:100%;border-radius:3px;background:var(--color-accent);width:{{ course.progressPct }}"></div></div>
+        <sc-for list="{{ courseLessons }}" as="l" hint-placeholder-count="6">
+          <div onClick="{{ l.play }}" style="display:flex;align-items:center;gap:16px;padding:14px 18px;border-radius:12px;background:{{ l.bg }};border:1px solid rgba(255,255,255,.08);cursor:pointer;opacity:{{ l.opacity }}" style-hover="border-color:var(--color-accent)">
+            <div style="width:40px;height:40px;border-radius:50%;flex:none;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="{{ l.iconFill }}" stroke="{{ l.iconStroke }}" stroke-width="2"><path d="{{ l.icon }}"/></svg>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-weight:500;font-size:15px;color:#fff">{{ l.title }}</div>
+              <div style="font-size:13px;color:var(--color-text-faint)">{{ l.sub }}</div>
+            </div>
+            <div style="font-size:13px;color:var(--color-text-faint);flex:none">{{ l.dur }}</div>
+          </div>
+        </sc-for>
+        <div style="display:flex;align-items:center;gap:16px;padding:14px 18px;border-radius:12px;border:1px dashed rgba(205,172,115,.4);margin-top:8px">
+          <div style="width:40px;height:40px;border-radius:50%;flex:none;background:rgba(205,172,115,.12);display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="var(--color-accent)" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg>
+          </div>
+          <div style="flex:1">
+            <div style="font-weight:500;font-size:15px;color:#fff">Quiz final &amp; certificat</div>
+            <div style="font-size:13px;color:var(--color-text-faint)">Validez le parcours pour recevoir votre certificat « Les Chemins de Soie ».</div>
+          </div>
+          <sc-if value="{{ course.quizLocked }}" hint-placeholder-val="{{ false }}">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent)" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          </sc-if>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <sc-if value="{{ course.paywall }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px solid rgba(205,172,115,.4);background:rgba(205,172,115,.08);border-radius:16px;padding:24px">
+            <div style="font-family:var(--font-heading);font-weight:700;font-size:19px;color:#fff;margin-bottom:8px">Cours Premium</div>
+            <div style="font-size:14px;line-height:1.5;color:var(--color-text-muted);margin-bottom:18px">La première leçon est offerte. Débloquez les {{ course.lockedCount }} leçons restantes, le quiz et le certificat avec Premium.</div>
+            <button onClick="{{ goAbonnement }}" style="width:100%;height:50px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-weight:500;font-size:15px;cursor:pointer" style-hover="background:var(--color-accent-600)">✦ Débloquer avec Premium</button>
+          </div>
+        </sc-if>
+        <div style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px">
+          <div style="font-family:var(--font-heading);font-weight:700;font-size:17px;color:#fff;margin-bottom:16px">Ressources du cours</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ courseResources }}" as="r" hint-placeholder-count="2">
+              <div style="display:flex;align-items:center;gap:12px;cursor:pointer;opacity:{{ r.opacity }}" style-hover="opacity:1">
+                <div style="width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex:none">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--color-accent-2-300)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                </div>
+                <div style="flex:1;min-width:0">
+                  <div style="font-size:14px;font-weight:500;color:#fff">{{ r.title }}</div>
+                  <div style="font-size:12px;color:var(--color-text-faint)">{{ r.meta }}</div>
+                </div>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="{{ r.actionColor }}" stroke-width="2"><path d="{{ r.actionIcon }}"/></svg>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px">
+          <div style="font-family:var(--font-heading);font-weight:700;font-size:17px;color:#fff;margin-bottom:12px">Votre guide</div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:48px;height:48px;border-radius:50%;background:var(--color-accent-2);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:700;font-size:18px;flex:none">C</div>
+            <div>
+              <div style="font-size:15px;font-weight:500;color:#fff">Claire Ansel</div>
+              <div style="font-size:13px;color:var(--color-text-faint)">Fondatrice — Les Chemins de Soie</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══ DASHBOARD ══ -->
+  <sc-if value="{{ isDashboard }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Tableau de bord" style="padding:24px 110px 96px">
+    <div style="font-size:15px;color:var(--color-accent-2-300);margin-bottom:6px">Bonjour Marie</div>
+    <h1 style="font-family:var(--font-heading);font-weight:800;font-size:42px;color:#fff;margin:0 0 32px">Votre chemin</h1>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:48px">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px">
+          <div style="font-family:var(--font-heading);font-weight:800;font-size:34px;color:var(--color-accent);margin-bottom:4px">{{ s.value }}</div>
+          <div style="font-size:14px;color:var(--color-text-muted)">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-family:var(--font-heading);font-weight:700;font-size:23px;color:#fff;margin-bottom:18px">Reprendre où vous en étiez</div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:48px">
+      <sc-for list="{{ enrolled }}" as="e" hint-placeholder-count="3">
+        <div onClick="{{ e.open }}" style="display:flex;align-items:center;gap:20px;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;cursor:pointer" style-hover="border-color:var(--color-accent)">
+          <div style="position:relative;width:120px;height:72px;border-radius:8px;overflow:hidden;flex:none">
+            <img src="{{ e.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+            <div style="position:absolute;inset:0;background:rgba(0,0,0,.25)"></div>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-weight:700;font-size:16px;color:#fff;margin-bottom:2px">{{ e.title }}</div>
+            <div style="font-size:13px;color:var(--color-text-faint);margin-bottom:10px">{{ e.sub }}</div>
+            <div style="height:5px;border-radius:3px;background:rgba(255,255,255,.1);max-width:420px"><div style="height:100%;border-radius:3px;background:var(--color-accent);width:{{ e.pct }}"></div></div>
+          </div>
+          <div style="font-size:14px;color:var(--color-accent);flex:none;margin-right:8px">{{ e.pct }}</div>
+          <button style="height:44px;padding:0 22px;border-radius:999px;border:none;background:rgba(255,255,255,.1);color:var(--color-accent);font-weight:500;font-size:14px;cursor:pointer;flex:none" style-hover="background:rgba(255,255,255,.18)">▶ Reprendre</button>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px">
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:19px;color:#fff;margin-bottom:16px">Certificats</div>
+        <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:rgba(205,172,115,.08);border:1px solid rgba(205,172,115,.3)">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--color-accent)" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+          <div>
+            <div style="font-size:15px;font-weight:500;color:#fff">Respirer pour s'apaiser</div>
+            <div style="font-size:13px;color:var(--color-text-faint)">Obtenu le 2 juillet 2026 · Télécharger le PDF</div>
+          </div>
+        </div>
+        <div style="font-size:13px;color:var(--color-text-faint);margin-top:14px">Terminez un parcours et son quiz pour recevoir un certificat.</div>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px">
+        <div style="font-family:var(--font-heading);font-weight:700;font-size:19px;color:#fff;margin-bottom:16px">Mon abonnement</div>
+        <sc-if value="{{ isFree }}" hint-placeholder-val="{{ true }}">
+          <div style="font-size:15px;color:var(--color-text-muted);margin-bottom:6px">Niveau <strong style="color:#fff">Découverte (gratuit)</strong></div>
+          <div style="font-size:13px;color:var(--color-text-faint);margin-bottom:18px">3 cours d'introduction · vidéos en 720p · sans certificat Premium</div>
+          <button onClick="{{ goAbonnement }}" style="height:48px;padding:0 26px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-weight:500;font-size:15px;cursor:pointer" style-hover="background:var(--color-accent-600)">✦ Passer Premium</button>
+        </sc-if>
+        <sc-if value="{{ isPremium }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:15px;color:var(--color-text-muted);margin-bottom:6px">Niveau <strong style="color:var(--color-accent)">✦ Premium</strong> — 14,90 € / mois</div>
+          <div style="font-size:13px;color:var(--color-text-faint);margin-bottom:18px">Catalogue complet · quiz &amp; certificats · téléchargements · prochaine facture le 3 août 2026</div>
+          <button onClick="{{ goAbonnement }}" style="height:48px;padding:0 26px;border-radius:999px;border:none;background:rgba(255,255,255,.1);color:var(--color-accent);font-weight:500;font-size:15px;cursor:pointer" style-hover="background:rgba(255,255,255,.18)">Gérer mon abonnement</button>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ══ ABONNEMENT ══ -->
+  <sc-if value="{{ isAbonnement }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Abonnement" style="padding:32px 110px 96px;max-width:1200px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <div style="font-size:15px;color:var(--color-accent-2-300);margin-bottom:8px;letter-spacing:.04em">ABONNEMENT</div>
+      <h1 style="font-family:var(--font-heading);font-weight:800;font-size:46px;color:#fff;margin:0 0 12px">Choisissez votre chemin</h1>
+      <p style="font-size:17px;color:var(--color-text-muted);margin:0">Commencez gratuitement, approfondissez quand vous êtes prêt·e.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:920px;margin:0 auto">
+      <div style="border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:22px">
+        <div>
+          <div style="font-family:var(--font-heading);font-weight:700;font-size:22px;color:#fff;margin-bottom:6px">Découverte</div>
+          <div style="font-size:14px;color:var(--color-text-faint)">Pour goûter au voyage</div>
+        </div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:44px;color:#fff">0 €<span style="font-size:16px;font-weight:400;color:var(--color-text-faint)"> / pour toujours</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+          <sc-for list="{{ freeFeatures }}" as="f" hint-placeholder-count="4">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:{{ f.color }}"><span style="color:{{ f.mark }};flex:none">{{ f.sign }}</span>{{ f.label }}</div>
+          </sc-for>
+        </div>
+        <button onClick="{{ pickFree }}" style="height:52px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-weight:500;font-size:15px;cursor:pointer" style-hover="background:rgba(255,255,255,.08)">{{ freeCta }}</button>
+      </div>
+      <div style="position:relative;border:1px solid var(--color-accent);border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:22px;background:rgba(205,172,115,.06)">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);padding:6px 18px;border-radius:999px;background:var(--color-accent);color:var(--color-neutral-900);font-size:12px;font-weight:500;letter-spacing:.08em">RECOMMANDÉ</div>
+        <div>
+          <div style="font-family:var(--font-heading);font-weight:700;font-size:22px;color:var(--color-accent);margin-bottom:6px">✦ Premium</div>
+          <div style="font-size:14px;color:var(--color-text-faint)">Le chemin complet</div>
+        </div>
+        <div style="font-family:var(--font-heading);font-weight:800;font-size:44px;color:#fff">14,90 €<span style="font-size:16px;font-weight:400;color:var(--color-text-faint)"> / mois</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+          <sc-for list="{{ premiumFeatures }}" as="f" hint-placeholder-count="6">
+            <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--color-text)"><span style="color:var(--color-accent);flex:none">✓</span>{{ f }}</div>
+          </sc-for>
+        </div>
+        <button onClick="{{ pickPremium }}" style="height:52px;border-radius:999px;border:none;background:var(--color-accent);color:var(--color-neutral-900);font-weight:500;font-size:16px;cursor:pointer" style-hover="background:var(--color-accent-600)">{{ premiumCta }}</button>
+        <div style="font-size:12px;color:var(--color-text-faint);text-align:center">Sans engagement · annulable à tout moment · 7 jours d'essai</div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+</div>
+</sc-if>
+
+<!-- ══ LECTEUR ══ -->
+<sc-if value="{{ isLecteur }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Lecteur vidéo" style="position:fixed;inset:0;z-index:100;background:var(--color-bg);padding:24px">
+  <div style="position:relative;width:100%;height:calc(100vh - 48px);border-radius:8px;overflow:hidden;background:#000">
+    <img src="{{ course.img }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85">
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 35%,rgba(0,0,0,.75) 100%)"></div>
+    <div onClick="{{ togglePlay }}" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%;background:rgba(0,0,0,.15);backdrop-filter:blur(20px);box-shadow:0 0 35px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:rgba(0,0,0,.35)">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff"><path d="{{ playIconPath }}"/></svg>
+    </div>
+    <div onClick="{{ closeLecteur }}" style="position:absolute;top:24px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);cursor:pointer" style-hover="background:rgba(255,255,255,.2)">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </div>
+    <div style="position:absolute;left:32px;right:32px;bottom:28px;z-index:2">
+      <div style="font-size:14px;color:var(--color-accent-2-300);margin-bottom:6px">{{ course.title }} — {{ lessonLabel }}</div>
+      <div style="font-family:var(--font-heading);font-weight:800;font-size:30px;color:#fff;margin-bottom:18px">{{ lessonTitle }}</div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="font-size:13px;color:var(--color-text-muted);flex:none">04:12</div>
+        <div style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.25)"><div style="width:38%;height:100%;border-radius:3px;background:var(--color-accent)"></div></div>
+        <div style="font-size:13px;color:var(--color-text-muted);flex:none">{{ lessonDur }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;premium&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Simulation&quot;}}">
+class Component extends DCLogic {
+  state = { screen: 'onboarding', courseId: 0, lessonIdx: 0, playing: false };
+  data() {
+    const cats = {
+      ser: { name: 'Émotions & Sérénité', dot: 'var(--color-cat-cyan)' },
+      conf: { name: 'Confiance & Estime', dot: 'var(--color-cat-rose)' },
+      ener: { name: 'Énergie & Vitalité', dot: 'var(--color-cat-green)' },
+      rel: { name: 'Relations & Communication', dot: 'var(--color-cat-yellow)' },
+    };
+    const L = (t, d) => ({ t, d });
+    return [
+      { id: 0, cat: 'ser', img: 'assets/card-9.jpg', free: true, title: "Respirer pour s'apaiser", level: 'Débutant', done: 4,
+        desc: "Quatre techniques de respiration simples pour calmer le corps et l'esprit en quelques minutes, où que vous soyez.",
+        lessons: [L('Pourquoi le souffle change tout', '6 min'), L('La cohérence cardiaque', '9 min'), L('La respiration 4-7-8', '7 min'), L('Respirer dans la tempête', '11 min')] },
+      { id: 1, cat: 'conf', img: 'assets/card-10.jpg', free: true, title: 'Les fondations de la confiance', level: 'Débutant', done: 2,
+        desc: 'Comprendre d\'où vient la confiance en soi et poser les premiers gestes concrets pour la cultiver au quotidien.',
+        lessons: [L('Confiance ou estime : la différence', '8 min'), L('Le dialogue intérieur', '10 min'), L('Trois petites victoires par jour', '7 min'), L('Oser demander', '9 min')] },
+      { id: 2, cat: 'ener', img: 'assets/card-5.jpg', free: true, title: 'Rituels du matin', level: 'Débutant', done: 0,
+        desc: 'Construire un matin qui vous ressemble : un rituel simple de 20 minutes pour commencer chaque journée ancré·e et clair·e.',
+        lessons: [L('L\'heure d\'or', '6 min'), L('Bouger avant de penser', '8 min'), L('Écrire trois lignes', '5 min'), L('Votre rituel sur mesure', '10 min')] },
+      { id: 3, cat: 'ser', img: 'assets/card-2.jpg', free: false, title: 'La méditation du cœur', level: 'Tous niveaux', done: 3,
+        desc: 'Huit leçons guidées pour apaiser le mental, écouter ce qui compte et retrouver un calme durable.',
+        lessons: [L('S\'asseoir, enfin', '9 min'), L('Le corps comme ancre', '12 min'), L('Accueillir les émotions', '14 min'), L('La bienveillance envers soi', '12 min'), L('Méditer dans le quotidien', '10 min'), L('Le silence intérieur', '15 min')] },
+      { id: 4, cat: 'ser', img: 'assets/card-3.jpg', free: false, title: "L'art du lâcher-prise", level: 'Intermédiaire', done: 0,
+        desc: 'Identifier ce qui dépend de vous — et apprendre, pas à pas, à déposer le reste.',
+        lessons: [L('Ce que retenir nous coûte', '10 min'), L('Le tri des soucis', '9 min'), L('Rituels de libération', '12 min'), L('Faire la paix avec l\'incertain', '13 min'), L('Vivre plus léger', '11 min')] },
+      { id: 5, cat: 'ener', img: 'assets/card-4.jpg', free: false, title: 'Ancrage & présence', level: 'Tous niveaux', done: 0,
+        desc: 'Des pratiques corporelles pour revenir ici et maintenant, et traverser les journées sans se disperser.',
+        lessons: [L('Les pieds sur terre', '8 min'), L('Marcher en conscience', '10 min'), L('Les cinq sens', '9 min'), L('Présence en réunion', '11 min')] },
+      { id: 6, cat: 'conf', img: 'assets/card-6.jpg', free: false, title: 'Dépasser le syndrome de l\'imposteur', level: 'Intermédiaire', done: 0,
+        desc: 'Reconnaître la petite voix qui doute, comprendre son mécanisme et reprendre votre légitimité.',
+        lessons: [L('Nommer l\'imposteur', '9 min'), L('L\'inventaire des preuves', '11 min'), L('Recevoir un compliment', '7 min'), L('Parler de ses réussites', '10 min'), L('La légitimité en action', '12 min')] },
+      { id: 7, cat: 'rel', img: 'assets/card-7.jpg', free: false, title: 'Communiquer sans blesser', level: 'Tous niveaux', done: 0,
+        desc: 'Les bases de la communication non violente : dire ce qui est vrai pour vous, sans casser le lien.',
+        lessons: [L('Observer sans juger', '10 min'), L('Sentiments et besoins', '12 min'), L('Formuler une demande', '9 min'), L('Écouter vraiment', '13 min'), L('Les conversations difficiles', '14 min')] },
+      { id: 8, cat: 'rel', img: 'assets/card-8.jpg', free: false, title: 'Poser ses limites', level: 'Intermédiaire', done: 0,
+        desc: 'Apprendre à dire non avec douceur et fermeté, et protéger votre énergie sans culpabiliser.',
+        lessons: [L('Pourquoi dire non est si dur', '9 min'), L('Le non aligné', '10 min'), L('Limites au travail', '12 min'), L('Limites en famille', '12 min')] },
+      { id: 9, cat: 'ser', img: 'assets/card-11.jpg', free: false, title: 'Sommeil réparateur', level: 'Débutant', done: 0,
+        desc: 'Comprendre votre sommeil et installer une routine du soir qui prépare des nuits profondes.',
+        lessons: [L('Les cycles du sommeil', '9 min'), L('La routine du soir', '10 min'), L('Écrans et mental agité', '8 min'), L('Se rendormir à 3h du matin', '11 min')] },
+      { id: 10, cat: 'ener', img: 'assets/card-12.jpg', free: false, title: 'Gratitude profonde', level: 'Tous niveaux', done: 0,
+        desc: 'Au-delà du carnet de gratitude : une pratique vivante qui transforme le regard sur vos journées.',
+        lessons: [L('Ce que la gratitude fait au cerveau', '8 min'), L('Le carnet, autrement', '9 min'), L('Remercier quelqu\'un', '10 min'), L('La gratitude dans l\'épreuve', '13 min')] },
+      { id: 11, cat: 'conf', img: 'assets/card-13.jpg', free: false, title: 'Clarté mentale & décisions', level: 'Avancé', done: 0,
+        desc: 'Des outils concrets pour désencombrer l\'esprit, trancher sereinement et arrêter de ruminer.',
+        lessons: [L('Vider la tête sur le papier', '9 min'), L('La matrice des choix', '11 min'), L('Décider avec le corps', '10 min'), L('En finir avec la rumination', '12 min'), L('Agir malgré le doute', '11 min')] },
+    ].map(c => ({ ...c, kicker: cats[c.cat].name, dot: cats[c.cat].dot }));
+  }
+  renderVals() {
+    const premium = this.props.premium ?? false;
+    const s = this.state, courses = this.data();
+    const go = (screen) => () => { this.setState({ screen }); window.scrollTo(0, 0); };
+    const open = (id) => () => { this.setState({ screen: 'cours', courseId: id }); window.scrollTo(0, 0); };
+    const c = courses[s.courseId];
+    const unlockedCount = (co) => (premium || co.free) ? co.lessons.length : 1;
+    const card = (co) => ({ img: co.img, kicker: co.kicker, title: co.title, dot: co.dot, open: open(co.id),
+      locked: !premium && !co.free, freeBadge: !premium && co.free,
+      meta: co.lessons.length + ' leçons · ' + co.level });
+    const filter = this.state.filter ?? 'all';
+    const cats = [['all', 'Tous les cours', null], ['ser', 'Émotions & Sérénité', 'var(--color-cat-cyan)'], ['conf', 'Confiance & Estime', 'var(--color-cat-rose)'], ['ener', 'Énergie & Vitalité', 'var(--color-cat-green)'], ['rel', 'Relations & Communication', 'var(--color-cat-yellow)']];
+    const unlocked = unlockedCount(c);
+    const paywall = !premium && !c.free;
+    const done = premium || c.free ? c.done : 0;
+    const navIcon = (key) => s.screen === key;
+    return {
+      isOnboarding: s.screen === 'onboarding',
+      inApp: s.screen !== 'onboarding' && s.screen !== 'lecteur',
+      isAccueil: s.screen === 'accueil', isCatalogue: s.screen === 'catalogue',
+      isCours: s.screen === 'cours', isDashboard: s.screen === 'dashboard',
+      isAbonnement: s.screen === 'abonnement', isLecteur: s.screen === 'lecteur',
+      isFree: !premium, isPremium: premium,
+      goAccueil: go('accueil'), goCatalogue: go('catalogue'), goDashboard: go('dashboard'), goAbonnement: go('abonnement'),
+      openFeatured: open(3),
+      navItems: [
+        { label: 'Accueil', key: 'accueil', icon: 'M4 12l8-8 8 8M6 10v9a1 1 0 0 0 1 1h4v-6h2v6h4a1 1 0 0 0 1-1v-9' },
+        { label: 'Catalogue', key: 'catalogue', icon: 'M3 5h7v7H3zM14 5h7v7h-7zM3 16h7v5H3zM14 16h7v5h-7z' },
+        { label: 'Tableau de bord', key: 'dashboard', icon: 'M22 12h-4l-3 9L9 3l-3 9H2' },
+        { label: 'Abonnement', key: 'abonnement', icon: 'M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8z' },
+      ].map(n => ({ ...n, go: go(n.key), bg: navIcon(n.key) ? 'var(--color-accent)' : 'rgba(255,255,255,.1)', color: navIcon(n.key) ? 'var(--color-neutral-900)' : 'var(--color-text-muted)' })),
+      rails: [
+        { title: 'Commencer gratuitement', items: courses.filter(x => x.free).map(card) },
+        { title: 'Émotions & Sérénité', items: courses.filter(x => x.cat === 'ser').map(card) },
+        { title: 'Confiance & Relations', items: courses.filter(x => x.cat === 'conf' || x.cat === 'rel').map(card) },
+      ],
+      filters: cats.map(([key, label, dot]) => ({ label, dot, pick: () => this.setState({ filter: key }),
+        bg: filter === key ? 'var(--color-accent)' : 'rgba(255,255,255,.08)',
+        color: filter === key ? 'var(--color-neutral-900)' : 'var(--color-text-muted)',
+        border: filter === key ? 'var(--color-accent)' : 'rgba(255,255,255,.14)' })),
+      catalogueItems: courses.filter(x => filter === 'all' || x.cat === filter).map(card),
+      course: { ...c, freeBadge: !premium && c.free, paywall, quizLocked: paywall,
+        lockedCount: c.lessons.length - 1,
+        meta: c.lessons.length + ' leçons · vidéo',
+        progressLabel: done + ' / ' + c.lessons.length + ' leçons terminées',
+        progressPct: Math.round(done / c.lessons.length * 100) + '%' },
+      courseLessons: c.lessons.map((l, i) => {
+        const locked = i >= unlocked, isDone = i < done;
+        return { title: (i + 1) + '. ' + l.t, dur: l.d,
+          sub: locked ? 'Réservé aux membres Premium' : (isDone ? 'Terminée' : 'Vidéo · leçon ' + (i + 1)),
+          bg: isDone ? 'rgba(255,255,255,.05)' : 'rgba(255,255,255,.03)',
+          opacity: locked ? '.55' : '1',
+          icon: locked ? 'M5 11h14v9H5zM8 11V7a4 4 0 0 1 8 0v4' : (isDone ? 'M5 13l4 4L19 7' : 'M8 5v14l11-7z'),
+          iconFill: locked || isDone ? 'none' : 'var(--color-accent)',
+          iconStroke: locked ? 'var(--color-accent)' : (isDone ? 'var(--color-accent-2-300)' : 'none'),
+          play: locked ? go('abonnement') : () => { this.setState({ screen: 'lecteur', lessonIdx: i, playing: false }); } };
+      }),
+      courseResources: [
+        { title: 'Carnet de pratique', meta: 'PDF · 12 pages', locked: paywall },
+        { title: 'Audio des méditations', meta: 'MP3 · 45 min', locked: paywall },
+        { title: 'Fiche récap du cours', meta: 'PDF · 2 pages', locked: false },
+      ].map(r => ({ ...r, opacity: r.locked ? '.5' : '.85',
+        actionColor: r.locked ? 'var(--color-accent)' : 'var(--color-text-faint)',
+        actionIcon: r.locked ? 'M5 11h14v9H5zM8 11V7a4 4 0 0 1 8 0v4' : 'M12 3v12M7 10l5 5 5-5M5 21h14' })),
+      stats: [
+        { value: premium ? '5' : '2', label: 'cours en route' },
+        { value: '9 h 20', label: 'de pratique en vidéo' },
+        { value: '12', label: 'jours de suite' },
+        { value: '1', label: 'certificat obtenu' },
+      ],
+      enrolled: [courses[0], courses[1], premium ? courses[3] : courses[2]].map(co => {
+        const d = (premium || co.free) ? co.done : 0;
+        return { img: co.img, title: co.title, open: open(co.id),
+          sub: co.kicker + ' · leçon ' + Math.min(d + 1, co.lessons.length) + ' sur ' + co.lessons.length,
+          pct: Math.round(d / co.lessons.length * 100) + '%' };
+      }),
+      freeFeatures: [
+        { sign: '✓', ok: true, label: "3 cours d'introduction complets" },
+        { sign: '✓', ok: true, label: 'Suivi de progression' },
+        { sign: '✓', ok: true, label: 'Application installable (PWA)' },
+        { sign: '—', ok: false, label: 'Catalogue complet (12 parcours)' },
+        { sign: '—', ok: false, label: 'Quiz & certificats' },
+        { sign: '—', ok: false, label: 'Ressources téléchargeables' },
+      ].map(f => ({ ...f, color: f.ok ? 'var(--color-text)' : 'var(--color-text-faint)', mark: f.ok ? 'var(--color-accent-2-300)' : 'var(--color-text-faint)' })),
+      premiumFeatures: ['Tout le niveau Découverte', 'Les 12 parcours en accès illimité', 'Quiz finaux & certificats', 'Carnets, audios & PDF téléchargeables', 'Nouveaux cours chaque mois', 'Visionnage hors-ligne dans l\'app'],
+      freeCta: premium ? 'Revenir au niveau gratuit' : 'Votre niveau actuel',
+      premiumCta: premium ? 'Votre niveau actuel ✦' : 'Commencer l\'essai gratuit',
+      pickFree: go('accueil'), pickPremium: go('accueil'),
+      lessonTitle: c.lessons[s.lessonIdx] ? c.lessons[s.lessonIdx].t : '',
+      lessonDur: c.lessons[s.lessonIdx] ? c.lessons[s.lessonIdx].d.replace(' min', ':00') : '',
+      lessonLabel: 'Leçon ' + (s.lessonIdx + 1),
+      playIconPath: s.playing ? 'M6 4h4v16H6zM14 4h4v16h-4z' : 'M8 5v14l11-7z',
+      togglePlay: () => this.setState(p => ({ playing: !p.playing })),
+      closeLecteur: () => this.setState({ screen: 'cours', playing: false }),
+    };
+  }
+}
+</script>
+</body>
+</html>
